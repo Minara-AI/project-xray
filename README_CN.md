@@ -48,7 +48,7 @@ docs/codebase/
 ### 方式一：一键安装（推荐）
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/anthropics/project-xray/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Minara-AI/project-xray/main/install.sh | bash
 ```
 
 安装器支持选择全局安装（`~/.claude/skills/`）、项目级安装（`.claude/skills/`）或两者都安装。
@@ -57,16 +57,22 @@ curl -fsSL https://raw.githubusercontent.com/anthropics/project-xray/main/instal
 
 将以下 prompt 粘贴到 Claude Code 中：
 
-> 安装 X-Ray 代码分析技能：执行 **`curl -fsSL https://raw.githubusercontent.com/anthropics/project-xray/main/install.sh | bash`** 并选择全局安装。然后告诉我已准备就绪，我可以使用 `/xray setup` 配置项目，或直接使用 `/xray` 开始分析。
+> 安装 X-Ray 代码分析技能：执行 **`curl -fsSL https://raw.githubusercontent.com/Minara-AI/project-xray/main/install.sh | bash`** 并选择全局安装。然后告诉我已准备就绪，我可以使用 `/xray setup` 配置项目，或直接使用 `/xray` 开始分析。
 
 ### 方式三：手动安装
 
 ```bash
 # 全局安装（所有项目可用）
-git clone --single-branch --depth 1 https://github.com/anthropics/project-xray.git ~/.claude/skills/xray
+git clone --single-branch --depth 1 https://github.com/Minara-AI/project-xray.git /tmp/project-xray \
+  && mkdir -p ~/.claude/skills \
+  && cp -r /tmp/project-xray/skills/xray ~/.claude/skills/xray \
+  && rm -rf /tmp/project-xray
 
 # 或安装到当前项目（通过 git 与团队共享）
-git clone --single-branch --depth 1 https://github.com/anthropics/project-xray.git /tmp/project-xray && cp -r /tmp/project-xray/skills/xray .claude/skills/xray && rm -rf /tmp/project-xray
+git clone --single-branch --depth 1 https://github.com/Minara-AI/project-xray.git /tmp/project-xray \
+  && mkdir -p .claude/skills \
+  && cp -r /tmp/project-xray/skills/xray .claude/skills/xray \
+  && rm -rf /tmp/project-xray
 ```
 
 ### 首次使用

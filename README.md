@@ -52,7 +52,7 @@ Plus a concise summary injected into your `CLAUDE.md` so Claude always has archi
 ### Option 1: One-command install (recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/anthropics/project-xray/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Minara-AI/project-xray/main/install.sh | bash
 ```
 
 The installer lets you choose between global install (`~/.claude/skills/`), per-project install (`.claude/skills/`), or both.
@@ -61,16 +61,22 @@ The installer lets you choose between global install (`~/.claude/skills/`), per-
 
 Copy and paste this prompt into Claude Code:
 
-> Install the X-Ray codebase analysis skill: run **`curl -fsSL https://raw.githubusercontent.com/anthropics/project-xray/main/install.sh | bash`** and choose global install. Then tell me it's ready and I can use `/xray setup` to configure my project, or `/xray` to start analysis directly.
+> Install the X-Ray codebase analysis skill: run **`curl -fsSL https://raw.githubusercontent.com/Minara-AI/project-xray/main/install.sh | bash`** and choose global install. Then tell me it's ready and I can use `/xray setup` to configure my project, or `/xray` to start analysis directly.
 
 ### Option 3: Manual install
 
 ```bash
 # Install globally (available in all projects)
-git clone --single-branch --depth 1 https://github.com/anthropics/project-xray.git ~/.claude/skills/xray
+git clone --single-branch --depth 1 https://github.com/Minara-AI/project-xray.git /tmp/project-xray \
+  && mkdir -p ~/.claude/skills \
+  && cp -r /tmp/project-xray/skills/xray ~/.claude/skills/xray \
+  && rm -rf /tmp/project-xray
 
 # Or install into current project (shared with teammates via git)
-git clone --single-branch --depth 1 https://github.com/anthropics/project-xray.git /tmp/project-xray && cp -r /tmp/project-xray/skills/xray .claude/skills/xray && rm -rf /tmp/project-xray
+git clone --single-branch --depth 1 https://github.com/Minara-AI/project-xray.git /tmp/project-xray \
+  && mkdir -p .claude/skills \
+  && cp -r /tmp/project-xray/skills/xray .claude/skills/xray \
+  && rm -rf /tmp/project-xray
 ```
 
 ### First Run

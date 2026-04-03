@@ -14,10 +14,10 @@
     "madge",
     "dependency-cruiser"
   ],
-  "homepage": "https://github.com/anthropics/project-xray",
+  "homepage": "https://github.com/Minara-AI/project-xray",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anthropics/project-xray.git"
+    "url": "git+https://github.com/Minara-AI/project-xray.git"
   },
   "license": "MIT",
   "author": "Minara AI",

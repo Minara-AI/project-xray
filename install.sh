@@ -2,9 +2,9 @@
 set -euo pipefail
 
 # X-Ray — Claude Code Skill Installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/anthropics/project-xray/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/Minara-AI/project-xray/main/install.sh | bash
 
-REPO_URL="https://github.com/anthropics/project-xray.git"
+REPO_URL="https://github.com/Minara-AI/project-xray.git"
 SKILL_NAME="xray"
 
 # Colors
