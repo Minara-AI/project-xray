@@ -1,0 +1,28 @@
+{
+  "name": "project-xray",
+  "version": "1.0.0",
+  "description": "Claude Code skill for deep codebase analysis — module mapping, dependency graphs, call chain tracing, and architecture documentation",
+  "keywords": [
+    "claude-code",
+    "claude-code-skill",
+    "codebase-analysis",
+    "architecture",
+    "dependency-graph",
+    "code-understanding",
+    "documentation",
+    "scc",
+    "madge",
+    "dependency-cruiser"
+  ],
+  "homepage": "https://github.com/anthropics/project-xray",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthropics/project-xray.git"
+  },
+  "license": "MIT",
+  "author": "Minara AI",
+  "files": [
+    "skills/",
+    "install.sh"
+  ]
+}
